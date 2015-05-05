@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<title><{$xoops_pagetitle}> - <{$xoops_sitename}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<div class="header_l">
+  <div class="header_r"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="36" id="logo">
+	<h1>
+	<img src="<{$xoops_imageurl}>images/logo.gif" alt="<{$xoops_sitename}>" />
+	</h1></td>
+    <td id="xoopsbanner"><{$xoops_banner}></td>
+    <td style="width:200px;">&nbsp;</td>
+  </tr>
+</table>
+</div></div>
+<div class="menu_bar"></div>
+<div class="middle_left">
+  
+   <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td id="leftcolumn">        <{foreach item=block from=$xoops_lblocks}> <div class="blockTitle"><img src="<{$xoops_imageurl}>images/icon.gif" alt="." align="middle" /><{$block.title}></div>
+        <div class="blockContent"><{$block.content}></div>
+        <br />
+<{/foreach}></td>
+      <td style="width:15px;"><img src="<{$xoops_imageurl}>images/spacer.gif" alt="." width="15" height="1" /></td>
+      <td id="centercolumn" style="width:100% "><br />
+
+	  <{if $xoops_showcblock == 1}>
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td id="centerLcolumn"><{foreach item=block from=$xoops_clblocks}>
+              <div class="blockTitle"><img src="<{$xoops_imageurl}>images/icon.gif" alt="." align="middle" /><{$block.title}></div>
+              <div class="blockContent"><{$block.content}></div>
+          <{/foreach}> </td>
+            <td id="centerRcolumn"><{foreach item=block from=$xoops_crblocks}>
+              <div class="blockTitle"><img src="<{$xoops_imageurl}>images/icon.gif" alt="." align="middle" /><{$block.title}></div>
+              <div class="blockContent"><{$block.content}></div>
+          <{/foreach}> </td>
+          </tr>
+          <tr>
+            <td id="centerCcolumn" colspan="2"><{foreach item=block from=$xoops_ccblocks}>
+             <div class="blockTitle"><img src="<{$xoops_imageurl}>images/icon.gif" alt="." align="absmiddle" /><{$block.title}></div>
+              <div class="blockContent"><{$block.content}></div><br />
+
+          <{/foreach}> </td>
+          </tr>
+        </table>
+        <{/if}>
+        <!-- End display center blocks -->
+		
+        <div id="content"> <{$xoops_contents}> <br />
+        </div>
+      <br />
+</td>
+      <td style="width:15px;"><img src="<{$xoops_imageurl}>images/spacer.gif" alt="." width="15" height="1" /></td>
+	  
+	  <{if $xoops_showrblock == 1}>
+      
+	  <td id="rightcolumn">
+<br />
+<br />
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td id="right_back"><{foreach item=block from=$xoops_rblocks}>
+      <div class="blockTitle"><{$block.title}></div>
+      <div class="blockContent"><{$block.content}></div>
+      <{/foreach}> </td>
+  </tr>
+</table>
+</td>
+		<{/if}>
+      <td style="width:15px; "><img src="<{$xoops_imageurl}>images/spacer.gif" alt="." width="15" height="1" /></td>
+    </tr>
+  </table>
+</div>
+<div class="footer"><br />
+  <{$xoops_footer}> | theme design <a href="http://2bcool.net">BCOOL</a> <br />
+  <br />
+</div>
+</body>
+</html>
